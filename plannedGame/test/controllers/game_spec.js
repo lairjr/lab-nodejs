@@ -16,7 +16,7 @@ describe('game controller', () => {
         }
       };
       game.getByGroupId(req, res);
-      assert(res.json.calledWith(sinon.match.array));
+      assert(res.json.calledWith(sinon.match.object));
 
       done();
     });
