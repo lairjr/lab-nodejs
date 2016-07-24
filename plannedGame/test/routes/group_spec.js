@@ -1,11 +1,11 @@
 import http from 'http';
 import assert from 'assert';
 
-import '../src/index.js';
+import '../../src/index.js';
 
 describe('index', () => {
   it('returns 200', done => {
-    http.get('http://127.0.0.1:3000', res => {
+    http.get('http://127.0.0.1:3000/group', res => {
       assert.equal(200, res.statusCode);
       done();
     });

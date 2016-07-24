@@ -1,11 +1,12 @@
 import express from 'express';
+import group from './routes/group';
+import game from './routes/game';
 
 const app = express();
 
-app.get('/', function (req, res) {
-  res.send('Hello World!');
-});
+app.use('', game);
+app.use('', group);
 
-app.listen(3000, function () {
-  console.log('Example app listening on port 3000!');
+app.listen(3000, () => {
+  console.log('Planned game API running at port 3000...');
 });
