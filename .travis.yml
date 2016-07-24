@@ -5,3 +5,9 @@ install:
   - npm install
 script:
   - npm test
+before_deploy:
+  - npm run build
+deploy:
+  provider: heroku
+  api_key: 97814fa4-098e-4b63-ac29-11d02724da3d
+  run: "npm run serve"
