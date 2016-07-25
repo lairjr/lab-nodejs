@@ -10,4 +10,5 @@ before_deploy:
 deploy:
   provider: heroku
   api_key: 97814fa4-098e-4b63-ac29-11d02724da3d
+  app: "plannedgame"
   run: "npm run serve"
